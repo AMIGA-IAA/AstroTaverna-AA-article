@@ -202,7 +202,7 @@ When one of the services is selected among the list, a more detailed description
 
 Given that the data returned by VO services are interoperable VOTables, there is a need for tools allowing actions for efficiently manipulating tabular data, as well as tools providing format conversion between VOTable format and others widely used tabular formats in astronomy research (e.g. FITS, CSV, TST, ASCII, HTML, etc.). Furthermore, spatial table cross matching (finding rows in other tables which might be near a given position, with a prescribed tolerance) and table joins on common keys are also common actions that need to be covered in data manipulation basic capabilities.
 
-AstroTaverna provides an AstroTools collection of built-in data manipulation services.
+AstroTaverna provides a collection of built-in data manipulation services, listed as \textit{Astro tools} within Taverna's services panel.
 \begin{itemize}
 \item \textit{Format conversion for tables}
 \item \textit{Concatenate two VOTables}
@@ -215,12 +215,23 @@ AstroTaverna provides an AstroTools collection of built-in data manipulation ser
 \item \textit{Select rows from a VOTable}
 \end{itemize}
 
-They may be dragged and added to the workflow diagram from the services panel of Taverna Workbench into the central design panel. They include table row filtering by conditional expressions on field values and column subsets. The expressions for row filtering and column selection follow the STILTS syntax\footnote{http://www.star.bristol.ac.uk/\~{}mbt/stilts/sun256/jel.html}\fnmsep\footnote{http://www.star.bristol.ac.uk/\~{}mbt/stilts/sun256/colid-list.html}.
+These services, shown in Fig.~\ref{fig:design}, can be dragged and added to the workflow diagram in the central design panel. They include table row filtering by conditional expressions on field values and column subsets.  The expressions for row filtering and column selection follow the STILTS syntax\footnote{http://www.star.bristol.ac.uk/\~{}mbt/stilts/sun256/jel.html}\fnmsep\footnote{http://www.star.bristol.ac.uk/\~{}mbt/stilts/sun256/colid-list.html}.
+
+\begin{figure}[tb]
+\centering 
+\includegraphics[width=0.99\columnwidth]{design}
+\caption{Workflow design in Taverna Workbench, showing \textit{Astro tools} services and a workflow for coordinate unit conversion. Adapted from \href{http://www.myexperiment.org/workflows/3515}{myExperiment workflow 3515}\protect\footnote{http://www.myexperiment.org/workflows/3515}}
+\label{fig:design}
+\end{figure}
+% or use above :
+%% \protect\footnotemark 
+% and here:
+%% \footnotetext{http://www.myexperiment.org/workflows/3515}
 
 \subsubsection{Data transformation}
 \label{DataTransformation}
 
-On the same basis, AstroTaverna also provides in the AstroTools collection of services for transformation of VOTable data. These include the addition of columns based on calculations and/or basic combination of existing ones, following algebraic expressions, transformation of sky coordinates and between different reference systems (e.g. equatorial, ecliptic, galactic, and others), resolution of astronomical object names into equatorial (Right Ascension, Declination) coordinates using the Sesame service, as well as the conversion of coordinates between different units. These are the following:
+On the same basis, AstroTaverna also provides a \textbf{collection of services} for transformation of VOTable data. These include the addition of columns based on calculations and/or basic combination of existing ones, following algebraic expressions, transformation of sky coordinates and between different reference systems (e.g. equatorial, ecliptic, galactic, and others), resolution of astronomical object names into equatorial (Right Ascension, Declination) coordinates using the \href{http://cdsweb.u-strasbg.fr/doc/sesame.htx}{Sesame service}\footnote{http://cdsweb.u-strasbg.fr/doc/sesame.htx}, as well as the conversion of coordinates between different units. These are the following:
 
 \begin{itemize}
 \item \textit{Add a column to a VOTable}
@@ -229,7 +240,7 @@ On the same basis, AstroTaverna also provides in the AstroTools collection of se
 \item \textit{Coordinate units conversion}
 \end{itemize}
 
-Other two services have been added related with the creation and validation of text files using templates. These templates are provided in the workflow, and are used together with information extracted from VOTables in order to create local files \textit{on-the-fly} (e.g. software configuration files, input data files in a given specific format, etc.).
+Other two services have been added related with the creation and validation of text files using templates. These templates are provided in the workflow, and are used together with information extracted from VOTables in order to create local files \textit{on-the-fly} (e.g. software configuration files or input data files in a given specific format).
 
 \begin{itemize}
 \item \textit{Fill template file from VOTable}
