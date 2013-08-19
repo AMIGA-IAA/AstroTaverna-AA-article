@@ -211,14 +211,14 @@ Given that the data returned by VO services are interoperable VOTables, there is
 
 AstroTaverna provides a collection of built-in data manipulation services, listed as \textit{Astro tools} within Taverna's services panel.
 \begin{itemize}
-\item \textit{Format conversion for tables}
+\item \textit{VOTable format conversion}
 \item \textit{Concatenate two VOTables}
 \item \textit{Concatenate a list of VOTables}
 \item \textit{Join two VOTables}
-\item \textit{Add a common field to a VOTable}
+\item \textit{Add common fields to a VOTable}
 \item \textit{Crossmatch two VOTables}
 \item \textit{Select columns from a VOTable}
-\item \textit{Extract a column from a VOTable as a list}
+\item \textit{Extract column from a VOTable as a list}
 \item \textit{Select rows from a VOTable}
 \end{itemize}
 
@@ -237,10 +237,10 @@ These services, shown in Fig.~\ref{fig:design}, can be dragged and added to the 
 On the same basis, AstroTaverna also provides a \textbf{collection of services} for transformation of VOTable data. These include the addition of columns based on calculations and/or basic combination of existing ones, following algebraic expressions, transformation of sky coordinates and between different reference systems (e.g. equatorial, ecliptic, galactic, and others), resolution of astronomical object names into equatorial (Right Ascension, Declination) coordinates using the \href{http://cdsweb.u-strasbg.fr/doc/sesame.htx}{Sesame service}\footnote{http://cdsweb.u-strasbg.fr/doc/sesame.htx}, as well as the conversion of coordinates between different units. These are the following:
 
 \begin{itemize}
-\item \textit{Add a column to a VOTable}
+\item \textit{Add column to a VOTable}
+\item \textit{Add coordinate units conversion}
 \item \textit{Resolve object name into coordinates} 
 \item \textit{Coordinates reference system transformation}
-\item \textit{Coordinate units conversion}
 \end{itemize}
 
 Other two services have been added related with the creation and validation of text files using templates. These templates are provided in the workflow, and are used together with information extracted from VOTables in order to create local files \textit{on-the-fly} (e.g. software configuration files or input data files in a given specific format).
@@ -314,7 +314,7 @@ Service Output VOTable Fields:
 \vspace{\baselineskip}
 \end{minipage}
 
-The workflow makes use of the \textit{Format conversion for tables} AstroTaverna service for making ASCII to VOTable conversion, as well as format conversion for datavalues using STILTS expressions on the \textit{Add a column to a VOTables} services. It also queries a specific Vizier ConeSearch service to retrieve data from a published catalog (J/A+A/545/A15). The output VOTable fields retrieved from this catalog are:
+The workflow makes use of the \textit{VOTable format conversion} AstroTaverna service for making ASCII to VOTable conversion, as well as format conversion for datavalues using STILTS expressions on the \textit{Add a column to a VOTables} services. It also queries a specific Vizier ConeSearch service to retrieve data from a published catalog (J/A+A/545/A15). The output VOTable fields retrieved from this catalog are:
 
 \begin{itemize}
 \item Flux density in Ks-band 
