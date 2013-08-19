@@ -234,7 +234,7 @@ These services, shown in Fig.~\ref{fig:design}, can be dragged and added to the 
 \subsubsection{Data transformation}
 \label{DataTransformation}
 
-On the same basis, AstroTaverna also provides a \textbf{collection of services} for transformation of VOTable data. These include the addition of columns based on calculations and/or basic combination of existing ones, following algebraic expressions, transformation of sky coordinates and between different reference systems (e.g. equatorial, ecliptic, galactic, and others), resolution of astronomical object names into equatorial (Right Ascension, Declination) coordinates using the \href{http://cdsweb.u-strasbg.fr/doc/sesame.htx}{Sesame service}\footnote{http://cdsweb.u-strasbg.fr/doc/sesame.htx}, as well as the conversion of coordinates between different units. These are the following:
+On the same basis, AstroTaverna also provides a collection of services for transformation of VOTable data. These include the addition of columns based on calculations and/or basic combination of existing ones, following algebraic expressions, transformation of sky coordinates and between different reference systems (e.g. equatorial, ecliptic, galactic, and others), resolution of astronomical object names into equatorial (Right Ascension, Declination) coordinates using the \href{http://cdsweb.u-strasbg.fr/doc/sesame.htx}{Sesame service}\footnote{http://cdsweb.u-strasbg.fr/doc/sesame.htx}, as well as the conversion of coordinates between different units. These are the following:
 
 \begin{itemize}
 \item \textit{Add column to a VOTable}
@@ -243,14 +243,14 @@ On the same basis, AstroTaverna also provides a \textbf{collection of services} 
 \item \textit{Coordinates reference system transformation}
 \end{itemize}
 
-Other two services have been added related with the creation and validation of text files using templates. These templates are provided in the workflow, and are used together with information extracted from VOTables in order to create local files \textit{on-the-fly} (e.g. software configuration files or input data files in a given specific format).
+Other two services have been added related with the creation and validation of text files using templates. These templates may be provided in the workflow, and used together with information extracted from VOTables in order to create local files \textit{on-the-fly} (e.g. software configuration files or input data files in a given specific format).
 
 \begin{itemize}
 \item \textit{Fill template file from VOTable}
 \item \textit{Validate template file against VOTable}
 \end{itemize}
 
-More complex data transformations may be possible using the Tool service provided by Taverna Workbench to locally execute specific command line software or OS commands and small script files. This is especially useful when adding existing snippets of Python scripting, commonly used in astronomy research.  
+More complex data transformations may be possible using the \textit{Tool} service provided by Taverna Workbench to locally execute specific command line software or OS commands and small script files. This is especially useful when adding existing snippets of Python scripting, commonly used in astronomy research.  
 
 \subsubsection{VO software integration and data inspection}
 \label{VOApps}
@@ -314,18 +314,18 @@ Service Output VOTable Fields:
 \vspace{\baselineskip}
 \end{minipage}
 
-The workflow makes use of the \textit{VOTable format conversion} AstroTaverna service for making ASCII to VOTable conversion, as well as format conversion for datavalues using STILTS expressions on the \textit{Add a column to a VOTables} services. It also queries a specific Vizier ConeSearch service to retrieve data from a published catalog (J/A+A/545/A15). The output VOTable fields retrieved from this catalog are:
+The workflow makes use of the \textit{VOTable format conversion} AstroTaverna service for making ASCII to VOTable conversion, as well as format conversion for datavalues using STILTS expressions on the \textit{Add column to a VOTable} services. It also queries a specific Vizier ConeSearch service to retrieve data from a published catalog (J/A+A/545/A15). The output VOTable fields retrieved from this catalog are:
 
 \begin{itemize}
-\item Flux density in Ks-band 
-\item Error in the flux density in Ks-band
-\item Log of the luminosity in Ks-band
-\item Error in the log of luminosity in Ks-band
+\item Flux density in Ks-band. 
+\item Error in the flux density in Ks-band.
+\item Log of the luminosity in Ks-band.
+\item Error in the log of luminosity in Ks-band.
 \end{itemize}
 
 All the previously enumerated fields conform the \textit{Object Properties} VOTable, which is then filtered according to observational and instrumental criteria: e.g. selecting those galaxies with declination greater than twenty degrees and those with observed angular diameter lower than two arc minutes. 
 
-The next step is the calculation of the distance to the selected galaxies, based on their heliocentric radial velocities and sky positions related to the center of Virgo cluster. The workflow executes a Python script as from the command line using the aforementioned parameters as input values. The script is registered and configured in the free-text box of Tool service that is provided by Taverna Workbench. The calculated distances are added to the \textit{Object Properties} VOTable. 
+The next step is the calculation of the distance to the selected galaxies, based on their heliocentric radial velocities and sky positions related to the center of Virgo cluster. The workflow executes a Python script as from the command line using the aforementioned parameters as input values. The script is registered and configured in the free-text box of the \textit{Tool} service that is provided by Taverna Workbench. The calculated distances are added to the \textit{Object Properties} VOTable. 
 
 Finally, there are other data access web services provided by NED archive that are queried, in order to complement the sample with related information from bibliography and associated external catalogs. 
 
@@ -337,7 +337,7 @@ The information for the \textit{Bibliography} VOTable is provided by the followi
 Service Id: \texttt{ivo://ned.ipac/Notes\_By\_Object\_Name}\\
 Service Output VOTable Fields:
 \begin{itemize}
-\item Object Name
+\item Object Name.
 \item The NED 19-digit Bibliographic Reference code (year, journal, volume number, page number, and the initial of the first author's last name).
 \item A Note transcribed as faithfully as possible from the catalog or paper.
 \end{itemize}
@@ -353,7 +353,7 @@ The following web service provides the information for the \textit{External Link
 Service Id: \texttt{ivo://NED/Basic\_External\_Links\_by\_object\_name}\\
 Service Output VOTable Fields:
 \begin{itemize}
-\item Object Name
+\item Object Name.
 \item NED's link to related on-line astronomical services that are specific to the survey or catalog associated with the NED name.
 \item URL address of related on-line astronomical service.
 \end{itemize}
