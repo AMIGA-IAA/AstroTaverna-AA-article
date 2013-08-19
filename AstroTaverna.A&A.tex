@@ -146,7 +146,7 @@ Although these are already major advantages over manual analysis methods and scr
 \subsection{AstroTaverna design drivers}
 \label{Drivers}
 
-The AstroTaverna plugin targets users with no special technical knowledge of the underlying applications involved in the workflow execution process. It should be easy to install and allow users to design, create and fully understand workflows without commissioning specialists or hiring software engineers. 
+The AstroTaverna plugin targets users with no special technical knowledge of the underlying applications involved in the workflow execution process. It has been conceived to be easy to install and allow users to design, create and fully understand workflows without commissioning specialists or hiring software engineers. 
 
 The AstroTaverna plugin aims to provide universal access to VO data services recorded in the VO Registry. It supports open science and open data access. In the VO context, standardized workflows could be helpful to gather and aggregate data from distributed datasets, in order to engage multi-epoch and multi-band comparative astrophysics. The vision of a workflow as the orchestration of tools and tasks running either locally or externally may be greatly improved if we consider the VO as a rich infrastructure of web services and data, where VO services may be used as components for web-services-based workflows. 
 
@@ -154,16 +154,16 @@ The main functional drivers to be addressed by the AstroTaverna plugin are:
 \begin{itemize}
 \item
 \textit{Data discovery, gathering and aggregation.}\\
-AstroTaverna should be an open window to public astronomical data and services. We take advantage of the infrastructure of interoperable data provided by the VO in order to build, for a sample of objects, tabular representations of their properties extracted from different archives. These tables may be rebuilt at any moment from the re-execution of the workflow, hence providing up-to-date information when refreshed.
+AstroTaverna aims to be an open window to public astronomical data and services. We take advantage of the infrastructure of interoperable data provided by the VO in order to build, for a sample of objects, tabular representations of their properties extracted from different archives. These tables may be rebuilt at any moment from the re-execution of the workflow, hence providing up-to-date information when refreshed.
 \item
 \textit{Data manipulation, filtering and cross matching.}\\
 The interoperable VOTable~\citep{Ochsenbein2009} data format provided by the VO allows efficient manipulation and combination of datasets coming from different archives. Tabular data should be handled along the workflow with no need to address major format conversion issues, but focusing on basic operations for data management (e.g. cross matching, filtering, table merging and concatenation, row/column extraction and addition, etc.) in order to shape and rebuild information based on very specific needs.
 \item
 \textit{Data transformation.}\\
-We should consider allowing actions on datasets going beyond data massage and manipulation, hence altering their values. Operations like transformation of sky coordinates and among reference systems, resolution of source names into coordinates, addition of new data based on existing ones, etc. are commonly used when working with tabular data of astronomical objects. More complex data transformations could be possible by adding small code snippets of Python scripting or local command line software.
+We have considered allowing actions on datasets going beyond data massage and manipulation, hence altering their values. Operations like transformation of sky coordinates and among reference systems, resolution of source names into coordinates, addition of new data based on existing ones, etc. are commonly used when working with tabular data of astronomical objects. More complex data transformations could be possible by adding small code snippets of Python scripting or local command line software.
 \item
 \textit{VO software integration and data inspection.}\\
-In order to benefit from widely used and well known functionalities of mature VO Apps, the integration of some of their specific tasks should be possible. Moreover, in order to achieve a full understanding of final and intermediate data a proper rendering of the VOTable format is needed. Sharing these data with VO Apps in a seamless way would allow the user to perform subsequent more sophisticated data analysis and data inspection.
+In order to benefit from widely used and well known functionalities of mature VO Apps, we decided to integrate some of their specific tasks. Moreover, in order to achieve a full understanding of final and intermediate data a proper rendering of the VOTable format was needed. Sharing these data with VO Apps in a seamless way would allow the user to perform subsequent more sophisticated data analysis and data inspection.
 \end{itemize}
 
 \subsection{Plugin design, implementation and functionalities}
