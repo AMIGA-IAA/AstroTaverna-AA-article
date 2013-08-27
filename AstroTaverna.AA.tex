@@ -176,8 +176,10 @@ Users consume transparently the VO-technologies by using astronomy VO-compliant 
 VO services are either SOAP (for the access to the VO Registry), or RESTful (for data access protocols) web services. Taverna Workbench provides tools for directly accessing this kind of services, but that means that discovery of these services is left to the user (while service discovery is integral for VO Apps), together with a certain knowledge of web services and the parameters required by each data access. AstroTaverna has been designed to provide the means for easy discovery and query of VO data access services. In addition, functionality for the manipulation and visualization of VOTables has also been added in order to make VO services first-class building blocks for Taverna workflows.
 
 \begin{figure}[tb]
-\centering 
-\includegraphics[width=0.99\columnwidth]{VOArch}
+\centering
+%Use resizebox as per http://www.aanda.org/index.php?option=com_content&task=view&id=171&Itemid=173#tables&figures
+\resizebox{\hsize}{!}{\includegraphics{VOArch}} 
+% \includegraphics[width=0.99\columnwidth]{VOArch}
 \caption{Virtual Observatory usage and architecture.}
 \label{fig:VOArch}
 \end{figure}
@@ -201,7 +203,7 @@ When one of the services is selected among the list, a more detailed description
 
 \begin{figure}[tb]
 \centering 
-\includegraphics[width=0.99\columnwidth]{VODiscovery}
+\resizebox{\hsize}{!}{\includegraphics{VODiscovery}}
 \caption{AstroTaverna user interface for discovery of VO data access services}
 \label{fig:VODiscovery}
 \end{figure}
@@ -228,7 +230,7 @@ These services, shown in Fig.~\ref{fig:design}, can be dragged and added to the 
 
 \begin{figure}[tb]
 \centering 
-\includegraphics[width=0.99\columnwidth]{design}
+\resizebox{\hsize}{!}{\includegraphics{design}}
 \caption{Workflow design in Taverna Workbench, showing \textit{Astro tools} services and a workflow for coordinate unit conversion. Adapted from \url{http://www.myexperiment.org/workflows/3515}}
 % \caption{Workflow design in Taverna Workbench, showing \textit{Astro tools} services and a workflow for coordinate unit conversion. Adapted from myExperiment workflow \#3515, \urlsamefont{http://www.myexperiment.org/workflows/3515}.}
 \label{fig:design}
@@ -267,7 +269,7 @@ AstroTaverna also integrates with the Aladin VO App, allowing the user to execut
 
 \begin{figure*}[tb]
 \centering 
-\includegraphics[width=0.99\textwidth]{WfDiagram}
+\includegraphics[width=17cm]{WfDiagram}
 \caption{Diagram of AstroTaverna workflow for the example use case described in Sect.~\ref{Usecase}.}
 \label{fig:WfDiagram}
 \end{figure*}
