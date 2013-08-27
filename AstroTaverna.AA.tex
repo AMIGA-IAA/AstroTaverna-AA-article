@@ -34,11 +34,12 @@
 \usepackage[breaklinks=true]{hyperref}
 % To add links in your PDF file, use the package "hyperref"
 % with options according to your LaTeX or PDFLaTeX drivers.
-\usepackage{cleveref}
+% \usepackage{cleveref}
 
-% To reference earlier footnotes 
-% http://tex.stackexchange.com/a/10116/35028
-\crefformat{footnote}{#2\footnotemark[#1]#3}
+% cleveref can interfere with hyperef; 
+%% To reference earlier footnotes 
+%% http://tex.stackexchange.com/a/10116/35028
+% \crefformat{footnote}{#2\footnotemark[#1]#3}
 
 \newcommand{\urlsamefont}[1]{\urlstyle{same}\url{#1}}
 \newcommand{\hrefnote}[2]{\href{#1}{#2}\footnote{\urlsamefont{#1}}}
@@ -228,7 +229,7 @@ These services, shown in Fig.~\ref{fig:design}, can be dragged and added to the 
 \begin{figure}[tb]
 \centering 
 \includegraphics[width=0.99\columnwidth]{design}
-\caption{Workflow design in Taverna Workbench, showing \textit{Astro tools} services and a workflow for coordinate unit conversion. Adapted from \href{http://www.myexperiment.org/workflows/3515}{myExperiment workflow 3515}\protect\footnote{http://www.myexperiment.org/workflows/3515}}
+\caption{Workflow design in Taverna Workbench, showing \textit{Astro tools} services and a workflow for coordinate unit conversion. Adapted from myExperiment workflow #3515, \urlsamefont{http://www.myexperiment.org/workflows/3515}.}
 \label{fig:design}
 \end{figure}
 
@@ -381,7 +382,7 @@ The focus of AstroTaverna lies in enhancing the documentation of the scientific 
 
 Transitioning the experimental protocol from interacting with graphical user interfaces into a more automated digital flow has made us notice the potential impact of workflows as \textit{living tutorials}, explicitly exposing how to take advantage of existing rich infrastructure of data and services provided by the Virtual Observatory. This is especially relevant with automated execution of Aladin macros and scripts in GUI mode. Scientists may visualize the actions performed by the workflows as they progress in their executions, allowing them to practice self-learning by example, which expedites training and avoids reinvention. 
 
-In this sense, a collection of 26 elemental workflows showcasing the potential of AstroTaverna (workflow snippets) has been developed and published in the myExperiment portal with the name of \href{http://www.myexperiment.org/packs/420}{AstroTaverna Starter Pack}\footnote{\label{starterpack}http://www.myexperiment.org/packs/420}, in order to provide potential users of AstroTaverna a set of small workflows carefully designed to perform very specific actions. These kind of workflows can be considered as \hrefnote{http://www.taverna.org.uk/developers/work-in-progress/components/}{workflow components}, designed to be mixed and matched into larger workflows to perform a particular analysis. 
+In this sense, a collection of 26 elemental workflows showcasing the potential of AstroTaverna (workflow snippets) has been developed and published in the myExperiment portal with the name of \hrefnote{http://www.myexperiment.org/packs/420}{\label{starterpack}AstroTaverna Starter Pack}, in order to provide potential users of AstroTaverna a set of small workflows carefully designed to perform very specific actions. These kind of workflows can be considered as \hrefnote{http://www.taverna.org.uk/developers/work-in-progress/components/}{workflow components}, designed to be mixed and matched into larger workflows to perform a particular analysis. 
 
 Digital libraries of workflows could increase the visibility of the scientific outcome, hence its discovery, re-use and a more efficient exploitation of present astronomical archives, computational infrastructures and observational facilities~\citep{Ruiz2012}. Astronomy is a collaborative science, and it has also become highly specialized, as many other disciplines. Sharing, preservation, discovery and a much simplified access to resources in the composition of scientific workflows will enable astronomers to greatly benefit from each other’s highly specialized knowhow, pushing them to share and publish not only results and data, but also processes and methodologies.
 
@@ -394,9 +395,10 @@ At the moment of writing these lines, the latest version of the AstroTaverna plu
 \section{Conclusions}
 \label{Conclusions}
 
-We have presented AstroTaverna, a plugin for Taverna Workbench 2.4 that provides the means to build astronomy web services-based workflows upon VO services discovery and VOTable efficient manipulation. It integrates SAMP-enabled VO Apps, as well as the possibility to execute Aladin scripts and macros. The plugin is easy to install for any user and operating system, installation instructions may be found in the \href{http://wf4ever.github.io/astrotaverna/}{AstroTaverna Website}\cref{website}. The plugin has been illustrated with a specific use case that considers a workflow making use of local services for VO data gathering, manipulation, transformation and inspection.
+We have presented AstroTaverna, a plugin for Taverna Workbench 2.4 that provides the means to build astronomy web services-based workflows upon VO services discovery and VOTable efficient manipulation. It integrates SAMP-enabled VO Apps, as well as the possibility to execute Aladin scripts and macros. The plugin is easy to install for any user and operating system, installation instructions may be found in the
+AstroTaverna Website\textsuperscript{\ref{website}}. The plugin has been illustrated with a specific use case that considers a workflow making use of local services for VO data gathering, manipulation, transformation and inspection.
 
-AstroTaverna  enables astronomers to capture, in a digital reproducible workflow, the experimental protocol and provenance information otherwise lost in procedural steps manually performed in GUIs of VO Apps. A collection of workflow snippets has been produced with the name of AstroTaverna Starter Pack\cref{starterpack} in order to encourage self-learning by example and avoid reinvention.
+AstroTaverna  enables astronomers to capture, in a digital reproducible workflow, the experimental protocol and provenance information otherwise lost in procedural steps manually performed in GUIs of VO Apps. A collection of workflow snippets has been produced with the name of AstroTaverna Starter Pack\textsuperscript{\ref{starterpack}} in order to encourage self-learning by example and avoid reinvention.
 
 Future work considers support for discovery, design and execution of TAP services, provide a client for PDL self-described services that will allow data input validation before service invocation, and straightforward access to the Starter Pack from the Taverna Workbench.
 
