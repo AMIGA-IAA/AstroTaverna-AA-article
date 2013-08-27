@@ -40,7 +40,7 @@
 % http://tex.stackexchange.com/a/10116/35028
 \crefformat{footnote}{#2\footnotemark[#1]#3}
 
-\newcommand{\urlwofont}[1]{\urlstyle{same}\url{#1}}
+\newcommand{\urlsamefont}[1]{\urlstyle{same}\url{#1}}
 \newcommand{\hrefnote}[2]{\href{#1}{#2}\footnote{\urlsamefont{#1}}}
 
 \begin{document}
@@ -223,7 +223,7 @@ AstroTaverna provides a collection of built-in data manipulation services, liste
 \item \textit{Select rows from a VOTable}
 \end{itemize}
 
-These services, shown in Fig.~\ref{fig:design}, can be dragged and added to the workflow diagram in the central design panel. They include table row filtering by conditional expressions on field values and column subsets.  The expressions for row filtering and column selection follow the STILTS syntax\footnote{\urlwofont{http://www.star.bristol.ac.uk/~mbt/stilts/sun256/jel.html}}\fnmsep\footnote{\urlwofont{http://www.star.bristol.ac.uk/~mbt/stilts/sun256/colid-list.html}}.
+These services, shown in Fig.~\ref{fig:design}, can be dragged and added to the workflow diagram in the central design panel. They include table row filtering by conditional expressions on field values and column subsets.  The expressions for row filtering and column selection follow the STILTS syntax\footnote{\urlsamefont{http://www.star.bristol.ac.uk/~mbt/stilts/sun256/jel.html}}\fnmsep\footnote{\urlsamefont{http://www.star.bristol.ac.uk/~mbt/stilts/sun256/colid-list.html}}.
 
 \begin{figure}[tb]
 \centering 
